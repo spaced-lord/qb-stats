@@ -1,0 +1,19 @@
+body {
+    background-color: lightgray;
+}
+
+header {
+    background-color: rgb(218, 144, 7);
+    text-align: center;
+    color: navy;
+    height: 5rem;
+    padding: 2.5rem;
+}
+
+table {
+    background-color: white;
+    height: 10rem;
+    padding: 5rem;
+    margin: 5rem;
+    width: 100%;
+}
