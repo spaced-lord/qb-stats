@@ -23,21 +23,10 @@ header {
     margin: 1rem;
 }
 
-table {
+.table__container {
     background-color: white;
     height: 10rem;
     padding: 2rem;
     margin: 7.5rem;
     width: 75rem;
-}
-
-
-.stat__area {
-    border: 1px solid black;
-
-}
-.stat__column {
-    border: solid 1px black;
-    padding: 5px;
-    width: 1rem;
 }
