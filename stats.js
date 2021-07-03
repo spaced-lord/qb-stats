@@ -1,37 +1,18 @@
-// const stats = 'qb_data.json';
+const xhttp = new XMLHttpRequest();
 
-function getStats() {
-   const jsonUrl = 'qb_data.json';
+xhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    console.log(xhttp.responseText);
+    const response = JSON.parse(xhttp.responseText);
+    const qbData = response.qb_data;
 
-   xmlhttp = new XMLHttpRequest();
-   xmlhttp.onreadystatechange = function() {
-       if(this.readyState == 4 && this.status == 200) {
-           var data = JSON.parse(this.responseText);
-           appendJSON(data);
-       }
-   }
-   xmlhttp.open("POST", jsonUrl, true);
-   xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-   xmlhttp.send();
+    var output = "";
+    for (var i = 0; i < qb_data.length; i++) {
+      output += "<colgroup>" + qbData[i].Player + "</colgroup>";
+    }
+    document.getElementById("people").innerHTML = output;
+  }
+};
 
-}
-
-function appendJSON(data) {
-    var table = document.getElementById('table__container');
-
-    data.forEach(function(object){
-        var tr = document.createElement('tr');
-
-        tr.innerHTML = '<td>' = object.Player + '</td>' +
-        '<td>' + object.Game + '</td>' +
-        '<td>' + object.Attempts + '</td>' +
-        '<td>' + object.Completions + '</td>' +
-        '<td>' + object.Yards + '</td>' +
-        '<td>' + object.Long + '</td>' +
-        '<td>' + object.LongTDPass + '</td>' +
-        '<td>' + object.Touchdowns + '</td>' +
-        '<td>' + object.Interceptions + '</td>' +
-        '<td>' + object.Sacks + '</td>';
-        table.appendChild(tr).appendChild
-    });
-}
+xhttp.open("GET", "qb_data.json", true);
+xhttp.send();
