@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quarterback Stats</title>
     <link rel="stylesheet" href="stats.css">
-    <link href="stats.js">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
@@ -20,19 +19,62 @@
             alt="Broncos-Logo">
     </header>
     <div class="table__container">
+        <select name="player__select" id="player__select">
+            <option aria-placeholder="Select">Select Player</option>
+            <option value="QB1">QB1</option>
+            <option value="QB2">QB2</option>
+            <option value="QB3">QB3</option>
+            <option value="QB4">QB4</option>
+            <option value="QB5">QB5</option>
+        </select>
+        <br>
+        <br>
         <table id="stats__table">
-            <colgroup class="stat__columns" id="stat__columns">
-                <col class="stat__column">Attempts</col>
-                <col class="stat__column">Completions</col>
-                <col class="stat__column">Yards</col>
-                <col class="stat__column">Long</col>
-                <col class="stat__column">Long TD Pass</col>
-                <col class="stat__column">Touchdowns</col>
-                <col class="stat__column">Interceptions</col>
-                <col class="stat__column">Sacks</col>
-            </colgroup>
+            <tr>
+                <th></th>
+                <th id="game1">Game 1</th>
+                <th id="game2">Game 2</th>
+                <th id="game3">Game 3</th>
+                <th id="game4">Game 4</th>
+                <th id="game5">Game 5</th>
+                <th id="game6">Game 6</th>
+                <th id="game7">Game 7</th>
+                <th id="game8">Game 8</th>
+                <th id="game9">Game 9</th>
+                <th id="game10">Game 10</th>
+                <th id="game11">Game 11</th>
+                <th id="game12">Game 12</th>
+            </tr>
+            <tr>
+                <th id="attempts">Attempts</th>
+            </tr>    
+            <tr>
+                <th id="completions">Completions</th>
+            </tr>
+            <tr></tr>
+                <th id="yards">Yards</th>
+            </tr>
+            <tr>
+                <th id="long">Long</th>
+            </tr>
+            <tr>
+                <th id="long__td">Long TD Pass</th>
+            </tr>
+            <tr>
+                <th id="touchdowns">Touchdowns</th>
+            </tr>
+            <tr>
+                <th id="interceptions">Interceptions</th>
+            </tr>
+            <tr>
+                <th id="sacks">Sacks</th>
+            </tr>
+            </tr>
         </table>
     </div>
+    <script src="stats.js">
+    </script>
+
 </body>
 
 </html>
