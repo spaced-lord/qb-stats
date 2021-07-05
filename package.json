@@ -1,0 +1,20 @@
+{
+  "name": "qb-stats",
+  "version": "1.0.0",
+  "description": "quarter back stats over 12 games",
+  "main": "server.js",
+  "scripts": {
+    "test": "no test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spaced-lord/qb-stats.git"
+  },
+  "author": "Zack Noe zackarynoe@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spaced-lord/qb-stats/issues"
+  },
+  "homepage": "https://github.com/spaced-lord/qb-stats#readme"
+}
