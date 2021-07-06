@@ -6,14 +6,17 @@ function playerSelect() {
   fetch("qb_data.json")
     .then((res) => res.json())
     .then((data) => {
-      let output = "<h2>Players</h2>";
-      data.forEach(function (player) {
+      let output = "<h2>Player</h2>";
+      data.forEach(function (Player, Games) {
         output += `
             <ul>
-                <li>Player Name: ${player}</li>
+                <li>Player: ${Player[0]}</li>
+                <li>Game1: ${Games.Attempts}</li>
             </ul>
             `;
+        console.log(Player);
+        console.log(Games);
       });
-      document.getElementById("output").innerHTML = output;
+      window.onload.document.getElementById("output").innerHTML = output;
     });
 }
